@@ -14,4 +14,4 @@ RUN chown dnsmasq /usr/sbin/dnsmasq \
 EXPOSE 53/tcp 53/udp
 
 USER dnsmasq
-ENTRYPOINT ["/usr/sbin/dnsmasq", "-k"]
+ENTRYPOINT ["/usr/sbin/dnsmasq", "--keep-in-foreground", "--log-facility=-"]
